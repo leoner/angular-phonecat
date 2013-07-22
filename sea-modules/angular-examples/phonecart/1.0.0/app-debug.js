@@ -1,4 +1,4 @@
-define("angular-examples/phonecart/1.0.0/app-debug", [ "angularjs-debug", "./filters-debug", "./services-debug", "ngResource-debug", "./controllers-debug" ], function(require, exports, module) {
+define("angular-examples/phonecat/1.0.0/app-debug", [ "angularjs-debug", "./filters-debug", "./services-debug", "ngResource-debug", "./controllers-debug" ], function(require, exports, module) {
     "use strict";
     var angular = require("angularjs-debug");
     var filter = require("./filters-debug");
@@ -23,7 +23,7 @@ define("angular-examples/phonecart/1.0.0/app-debug", [ "angularjs-debug", "./fil
     };
 });
 
-define("angular-examples/phonecart/1.0.0/filters-debug", [ "angularjs-debug" ], function(require, exports, module) {
+define("angular-examples/phonecat/1.0.0/filters-debug", [ "angularjs-debug" ], function(require, exports, module) {
     "use strict";
     var angular = require("angularjs-debug");
     /* Filters */
@@ -34,7 +34,7 @@ define("angular-examples/phonecart/1.0.0/filters-debug", [ "angularjs-debug" ], 
     });
 });
 
-define("angular-examples/phonecart/1.0.0/services-debug", [ "angularjs-debug", "ngResource-debug" ], function(require, exports, module) {
+define("angular-examples/phonecat/1.0.0/services-debug", [ "angularjs-debug", "ngResource-debug" ], function(require, exports, module) {
     "use strict";
     var angular = require("angularjs-debug");
     var ngResource = require("ngResource-debug");
@@ -52,7 +52,7 @@ define("angular-examples/phonecart/1.0.0/services-debug", [ "angularjs-debug", "
     } ]);
 });
 
-define("angular-examples/phonecart/1.0.0/controllers-debug", [], function(require, exports, module) {
+define("angular-examples/phonecat/1.0.0/controllers-debug", [], function(require, exports, module) {
     "use strict";
     /* Controllers */
     function PhoneListCtrl($scope, P) {
