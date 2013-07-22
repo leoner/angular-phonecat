@@ -5,16 +5,36 @@
   <title>Google Phone Gallery</title>
   <link rel="stylesheet" href="css/app.css">
   <link rel="stylesheet" href="css/bootstrap.css">
-  <script src="lib/angular/angular.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/controllers.js"></script>
-  <script src="js/filters.js"></script>
-  <script src="js/services.js"></script>
-  <script src="lib/angular/angular-resource.js"></script>
-</head>
+ </head>
 <body>
 
   <div ng-view></div>
+
+<script src="../sea-modules/seajs/seajs/2.1.0/sea.js"></script>
+<script>
+
+  // Set configuration
+  seajs.config({
+    base: "../sea-modules/",
+    alias: {
+      "angularjs": "angular/angularjs/1.1.5/angular.js",
+      "ngResource": "angular/angularjs/1.1.5/angular-resource.js"
+    }
+  })
+
+  // For development
+  if (location.href.indexOf("?dev") > 0) {
+    seajs.use("../static/phonecat/src/app", function(app) {
+      app.init()
+    })
+  }
+  // For production
+  else {
+    seajs.use("angular-examples/phonecart/1.0.0/app", function(app) {
+      app.init()
+    })
+  }
+</script>
 
 </body>
 </html>
