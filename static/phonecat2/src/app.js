@@ -1,15 +1,14 @@
 define(function(require, exports, module) {
   'use strict';
 
-  var angular = require('angularjs')
-  var filter = require('./filters')
-  var service = require('./services')
+  var phonecat = require('./phonecat')
   var ctrl = require('./controllers')
-
+  // load modules
+  var service = require('./services')
+  var filter = require('./filters')
 
   /* App Module */
-  angular.module('phonecat', ['phonecatFilters', 'phonecatServices']).
-    config(['$routeProvider', function($routeProvider) {
+  phonecat.config(['$routeProvider', function($routeProvider) {
     $routeProvider.
         when('/phones', {templateUrl: 'partials/phone-list.html',   controller: ctrl.PhoneListCtrl}).
         when('/phones/:phoneId', {templateUrl: 'partials/phone-detail.html', controller: ctrl.PhoneDetailCtrl}).
@@ -18,7 +17,7 @@ define(function(require, exports, module) {
 
   return {
     init: function() {
-      //angular.bootstrap(document.body, ['phonecat'])
+      angular.bootstrap(document.body, ['phonecat'])
     }
   }
 })

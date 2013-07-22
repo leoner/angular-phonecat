@@ -1,11 +1,12 @@
 {
   "family": "angular-examples",
-  "name": "phonecat",
+  "name": "phonecat2",
   "version": "1.0.0",
 
   "spm": {
     "alias": {
-      "angularjs": "angularjs"
+      "angularjs": "angularjs",
+      "ngResource": "ngResource"
     },
     "output": ["app.js"]
   }

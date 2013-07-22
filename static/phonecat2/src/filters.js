@@ -1,10 +1,10 @@
 define(function(require, exports, module) {
   'use strict';
 
-  var angular = require('angularjs');
+  var phonecat = require('./phonecat');
   /* Filters */
 
-  angular.module('phonecatFilters', []).filter('checkmark', function() {
+  phonecat.filter('checkmark', function() {
     return function(input) {
       return input ? '\u2713' : '\u2718';
     };

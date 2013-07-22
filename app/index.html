@@ -29,6 +29,12 @@
     })
   }
   // For production
+  else if (location.href.indexOf('?2') > 0){
+    seajs.use("angular-examples/phonecat2/1.0.0/app", function(app) {
+      app.init()
+    })
+  }
+  // For production
   else {
     seajs.use("angular-examples/phonecat/1.0.0/app", function(app) {
       app.init()
